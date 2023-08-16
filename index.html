@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Question_two</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sign Up Form Example</h1>
+    </header>
+    <div class="container">
+        <table>
+            <form>
+                <tbody>
+                    <tr>
+                        <td><label for="firstName">First,</label>
+                            <label for="lastName">Last Name*:</label>
+                        </td>
+                        <td><input type="text" id="firstName" required>
+                            <input type="text" id="lastName" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="organization">Organization:</label></td>
+                        <td><input type="text" id="organization"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email address*:</label></td>
+                        <td><input type="email" id="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="workPhone">Work Phone:</label></td>
+                        <td><input type="number" id="workPhone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="homePhone">Home Phone:</label></td>
+                        <td><input type="number" id="homePhone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cellPhone">Cell Phone:</label></td>
+                        <td><input type="text" id="cellPhone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fax">Fax:</label></td>
+                        <td><input type="text" id="fax"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="addressOne">Address 1*:</label></td>
+                        <td><input type="text" id="addressOne" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="addressTwo">Address 2:</label></td>
+                        <td><input type="text" id="addressTwo"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">City*:</label></td>
+                        <td><input type="text" id="city" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="stateOrProvince">State/Province:</label></td>
+                        <td><input type="text" id="stateOrProvince"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="zipPortalCode">Zip/Portal Code</label></td>
+                        <td><input type="number" id="zipPortalCode"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country*:</label></td>
+                        <td><input type="text" id="country" required></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><Label>* , required fields</Label></td>
+                        <td><button id="button" type="submit">submit</button></td>
+                    </tr>
+                </tfoot>
+            </form>
+        </table>
+    </div>
+    <footer>
+        <p id="result">Masdr Candidates Test</p>
+    </footer>
+    <script>
+        document.getElementById("button").addEventListener("click", e => {
+            let firstName = document.getElementById("firstName").value
+            let lastName = document.getElementById("lastName").value
+            let result = document.getElementById("result");
+            result.textContent = `!Congratulations ${firstName}  ${lastName}  you are now signed up`
+            e.preventDefault()
+        })
+    </script>
+</body>
+
+</html>
