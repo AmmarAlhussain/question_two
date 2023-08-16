@@ -90,9 +90,15 @@
         document.getElementById("button").addEventListener("click", e => {
             let firstName = document.getElementById("firstName").value
             let lastName = document.getElementById("lastName").value
+            let email = document.getElementById("email").value
+            let addressOne = document.getElementById("addressOne").value
+            let city = document.getElementById("city").value
+            let country = document.getElementById("country").value
             let result = document.getElementById("result");
-            result.textContent = `!Congratulations ${firstName}  ${lastName}  you are now signed up`
-            e.preventDefault()
+            if (firstName != "" && lastName != "" && email != "" && addressOne != "" && city != "" && country != "") {
+                result.textContent = `!Congratulations ${firstName}  ${lastName}  you are now signed up`
+                e.preventDefault()
+            }
         })
     </script>
 </body>
